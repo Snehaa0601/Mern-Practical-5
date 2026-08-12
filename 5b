@@ -1,0 +1,72 @@
+App.jsx
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <h1>My React Application</h1>
+
+
+      <nav>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/about">About</Link>
+        <br />
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+
+      <hr />
+
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+
+
+
+
+export default App;
+
+Home.jsx
+function Home(){
+    return (
+        <div>
+            <h1>Home Page</h1>
+            <p>Welcome to react Application</p>
+        </div>
+    );
+}
+export default Home;
+
+About.jsx
+function About (){
+    return (
+        <div>
+            <h1>About Page</h1>
+            <p>This page contain information about our apllication</p>
+        </div>
+    );
+}
+export default About;
+
+Contact.jsx
+function Contact (){
+    return (
+        <div>
+            <h1>Contact information</h1>
+            <p>Email : support@example.com</p>
+        </div>
+    );
+}
+export default Contact;
